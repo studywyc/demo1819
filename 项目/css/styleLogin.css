@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background: #eee;
+}
+
+.topWearp {
+  width: 100%;
+  background: #333;
+}
+
+.top {
+  width: 1138px;
+  height: 32px;
+  margin: 0 auto;
+  background: #333;
+}
+.top .navUl {
+  float: left;
+  width: 260px;
+  height: 32px;
+}
+.top .navUl a {
+  color: #afcccc;
+  float: left;
+  margin: 0 10px;
+  line-height: 32px;
+  font-size: 12px;
+}
+.top .rightUl {
+  float: left;
+  width: 360px;
+  height: 32px;
+  line-height: 32px;
+  margin-left: 518px;
+}
+.top .rightUl li {
+  position: relative;
+  float: left;
+  font-size: 12px;
+}
+.top .rightUl li a {
+  color: #fff;
+  display: block;
+}
+.top .rightUl li ul {
+  display: none;
+  position: absolute;
+  background: #0086B3;
+}
+.top .rightUl a {
+  width: 60px;
+  height: 34px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  line-height: 34px;
+  float: left;
+  display: block;
+}
+
+.seekLogoWearp {
+  width: 100%;
+  background: #fff;
+}
+
+.seekLogo {
+  width: 1138px;
+  height: 100px;
+  margin: 0 auto;
+}
+.seekLogo img {
+  float: left;
+  margin-top: 22px;
+}
+.seekLogo form {
+  float: left;
+  margin-left: 212px;
+}
+.seekLogo form input {
+  width: 486px;
+  height: 40px;
+  border: 3px solid #de3c5b;
+  margin-top: 22px;
+}
+.seekLogo form .btn {
+  display: inline-block;
+  width: 82px;
+  height: 48px;
+  background: #de3c5b;
+  border: none;
+  margin-left: -7px;
+  margin-top: -30px;
+}
+.seekLogo form .shopping {
+  border: none;
+  width: 78px;
+  height: 34px;
+  background: #de3c5b;
+  border-radius: 15px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.navWearp {
+  background: #de3c5b;
+  width: 100%;
+}
+
+.nav {
+  width: 1138px;
+  height: 40px;
+  margin: 0 auto;
+}
+.nav ul li a:hover {
+  background: #bf0024;
+}
+.nav a {
+  float: left;
+  padding: 0 19px;
+  line-height: 40px;
+  color: #fff;
+}
+.nav .mix {
+  float: right;
+}
+
+.sidebar {
+  position: fixed;
+  top: 222px;
+  right: 0;
+}
+.sidebar div {
+  width: 40px;
+  height: 35px;
+  background: #666;
+  margin-bottom: 4px;
+  font-size: 12px;
+  border-radius: 4px;
+  text-align: center;
+}
+.sidebar div button {
+  width: 40px;
+  height: 35px;
+  background: #666;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+}
+.sidebar div a {
+  color: #fff;
+}
+.sidebar .lastBar {
+  margin-top: 152px;
+  display: none;
+}
+.sidebar .lastBar i {
+  line-height: 35px;
+}
+
+.loginMain {
+  width: 435px;
+  height: 735px;
+  background: #fff;
+  margin: 20px auto 38px;
+  padding: 15px;
+}
+.loginMain .formlg img {
+  width: 435px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.loginMain .ip1 {
+  width: 433px;
+  height: 32px;
+  border: 1px solid #ccc;
+  line-height: 32px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.loginMain .ip1 label {
+  display: inline-block;
+  width: 80px;
+  height: 32px;
+  background: #eee;
+  text-align: center;
+  border-right: 1px solid #ccc;
+}
+.loginMain .ip1 input {
+  border: none;
+  width: 350px;
+  height: 30px;
+  border-radius: 4px;
+}
+.loginMain .ipn {
+  width: 435px;
+  height: 32px;
+  display: inline-block;
+}
+.loginMain .ipn input {
+  border-radius: 4px;
+  line-height: 32px;
+  border: 1px solid #ccc;
+  width: 204px;
+  height: 30px;
+  margin-top: 2px;
+  float: left;
+}
+.loginMain .ipn .yz {
+  background: url(../img/1.png) -10px -15px;
+  width: 88px;
+  height: 28px;
+  font-style: italic;
+  border: 1px solid #29a3ee;
+  display: inline-block;
+  margin-left: 4px;
+}
+.loginMain .btnTi {
+  margin-top: 20px;
+  width: 435px;
+  height: 32px;
+  background: #337ab7;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.loginMain .forget {
+  margin-left: 138px;
+}
+.loginMain .forget .enter {
+  width: 52px;
+  height: 32px;
+  border: none;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+}
+.loginMain .forget .last {
+  width: 80px;
+  height: 32px;
+  border: none;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  margin-left: 4px;
+  margin-bottom: 22px;
+}
+
+.bott {
+  width: 435px;
+  height: 130px;
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+}
+.bott li {
+  float: left;
+  text-align: center;
+  margin: 33px 45px;
+}
+.bott li a {
+  color: #777;
+  font-size: 12px;
+}
+
+.lgbomWarp {
+  width: 100%;
+  background: #333;
+}
+
+.lgbom {
+  width: 1138px;
+  height: 120px;
+  margin: 0 auto;
+  background: #333;
+}
+.lgbom ul {
+  margin-left: 400px;
+}
+.lgbom ul li {
+  float: left;
+  color: #fff;
+  margin: 20px 5px;
+}
+
+/*# sourceMappingURL=styleLogin.css.map */

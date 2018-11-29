@@ -3,3 +3,219 @@
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body{
+    background: #eee;
+}
+@mixin public($height:300px){
+    width: 1138px;
+    height: $height;
+    margin: 0 auto;
+    
+}
+.topWearp{width: 100%;background: #333;}
+//top
+.top{
+    @include public(32px);
+    background: #333; 
+    .navUl{
+        float: left;
+         width: 260px;
+         height: 32px; 
+         background: yellow;
+        a{
+            color: #afcccc;
+            float: left;
+            margin:0 10px;
+            line-height: 32px;
+            font-size: 12px;
+        } 
+    } 
+    .rightUl{
+        float: right;
+        width: 370px;
+        height: 32px;
+        line-height: 32px;
+        background: red;
+        a{
+            float: left;
+            padding: 0 10px;
+            font-size: 12px;
+            color: #ccc;
+        }
+    }
+}
+
+//logo
+.seekLogoWearp{width: 100%;background: #fff;}
+.seekLogo{
+    @include public(100px);
+    img{
+        float: left;
+        margin-top: 22px;
+    }
+    form{
+        float: left;
+        margin-left: 212px;
+        input{
+            width: 486px;
+            height: 40px;
+            border: 2px solid #de3c5b;
+            margin-top: 22px;
+        }
+        
+        .btn{
+            
+            display: inline-block;
+            width: 82px;
+            height: 40px;
+            background: #de3c5b;
+            border: none;
+            margin-left: -5px;
+            margin-top: -30px;
+        }
+        .shopping{
+            border: none;
+            width: 78px;
+            height: 34px;
+            background: #de3c5b;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+    }
+}
+
+//导航
+.navWearp{background: #de3c5b;width: 100%;}
+.nav{
+    @include public(40px);
+    ul li a:hover{
+        background: #bf0024;
+    }
+    a{
+        float: left;
+        padding: 0 19px;
+        line-height: 40px;
+        color: #fff;
+    }
+    .mix{
+        float: right;
+    }
+   
+    
+}
+
+.main{
+    @include public(auto);
+    
+}
+.leftlist{
+    float: left;
+    width: 182px;
+    height: auto;
+    background: #0086B3;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.listnice a li{
+    width: 182px;
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #ddd;
+    margin-left: 4px;
+    img{
+        width: 24px;
+        height: 24px;
+        margin: 0 8px 0 14px;
+    } 
+}
+#tao img{
+    padding-top: 20px;
+    width: 182px;
+    height: auto;
+}
+
+.center{
+    margin-top: 10px;
+    margin-left: 8px;
+    width: 660px;
+    height: 310px;
+    float: left;
+    background: #404040;
+    
+}
+.cen{
+   width: 660px;
+   height: 310px; 
+   position: relative;
+}
+.carousel{
+    width: 660px;
+    height: 380px;
+   img{
+        width: 660px;
+        height: 310px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    } 
+}
+.active{
+    width: 100%;
+    height: 40px;
+    z-index: 10;
+    position: absolute;
+    left: 296px;
+    top: 256px;
+    
+    li{
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        background: yellow;
+        float: left;
+        border-radius:50% ;
+        margin: 0 2px;
+        cursor: pointer;   
+    }
+   .bot{
+       z-index: 20;
+       width: 660px;
+       height: 102px;
+       background: pink;
+   } 
+}
+.pos{  
+    li{
+       width: 72px;
+       height: 56px;
+       float: left;
+       padding: 0 30px;
+       text-align: center;
+       margin-top: 15px;
+       img{
+         width: 54px;
+         height: 54px;  
+       } 
+    }
+}
+
+
+
+
+
+
+.right{
+    width: 270px;
+    height: auto;
+    background: blue;
+    float: left;
+    margin-left: 8px;
+}

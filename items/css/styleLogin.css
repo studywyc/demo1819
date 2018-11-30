@@ -187,6 +187,7 @@ body {
   line-height: 32px;
   border-radius: 4px;
   margin-bottom: 15px;
+  position: relative;
 }
 .loginMain .ip1 label {
   display: inline-block;
@@ -199,7 +200,22 @@ body {
 .loginMain .ip1 input {
   border: none;
   width: 350px;
-  height: 30px;
+  height: 26px;
+  border-radius: 4px;
+}
+.loginMain .ip1 span {
+  display: block;
+  width: 120px;
+  height: 60px;
+  background: black;
+  color: #fff;
+  position: absolute;
+  left: 178px;
+  top: 20px;
+  z-index: 10;
+  display: none;
+  font-size: 12px;
+  text-align: center;
   border-radius: 4px;
 }
 .loginMain .ipn {

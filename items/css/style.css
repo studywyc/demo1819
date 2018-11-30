@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+body {
+  background: #eee; }
+
+.topWearp {
+  width: 100%;
+  background: #333; }
+
+.top {
+  width: 1138px;
+  height: 32px;
+  margin: 0 auto;
+  background: #333; }
+  .top .navUl {
+    float: left;
+    width: 260px;
+    height: 32px; }
+    .top .navUl a {
+      color: #afcccc;
+      float: left;
+      margin: 0 10px;
+      line-height: 32px;
+      font-size: 12px; }
+  .top .rightUl {
+    float: left;
+    width: 360px;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 518px; }
+    .top .rightUl li {
+      position: relative;
+      float: left;
+      font-size: 12px; }
+      .top .rightUl li a {
+        color: #fff;
+        display: block; }
+      .top .rightUl li ul {
+        display: none;
+        position: absolute;
+        background: #0086B3; }
+    .top .rightUl a {
+      width: 60px;
+      height: 34px;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+      line-height: 34px;
+      float: left;
+      display: block; }
+
+.seekLogoWearp {
+  width: 100%;
+  background: #fff; }
+
+.seekLogo {
+  width: 1138px;
+  height: 100px;
+  margin: 0 auto; }
+  .seekLogo img {
+    float: left;
+    margin-top: 22px; }
+  .seekLogo form {
+    float: left;
+    margin-left: 212px; }
+    .seekLogo form input {
+      width: 486px;
+      height: 40px;
+      border: 2px solid #de3c5b;
+      margin-top: 22px; }
+    .seekLogo form .btn {
+      display: inline-block;
+      width: 82px;
+      height: 40px;
+      background: #de3c5b;
+      border: none;
+      margin-left: -5px;
+      margin-top: -30px; }
+    .seekLogo form .shopping {
+      border: none;
+      width: 78px;
+      height: 34px;
+      background: #de3c5b;
+      border-radius: 15px;
+      font-size: 12px;
+      margin-left: 10px; }
+
+.navWearp {
+  background: #de3c5b;
+  width: 100%; }
+
+.nav {
+  width: 1138px;
+  height: 40px;
+  margin: 0 auto; }
+  .nav ul li a:hover {
+    background: #bf0024; }
+  .nav a {
+    float: left;
+    padding: 0 19px;
+    line-height: 40px;
+    color: #fff; }
+  .nav .mix {
+    float: right; }
+
+.main {
+  width: 1138px;
+  height: 300px;
+  margin: 0 auto; }
+
+.leftlist {
+  float: left;
+  width: 182px;
+  height: auto;
+  background: #0086B3;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px; }
+
+.listnice a li {
+  width: 182px;
+  height: 44px;
+  line-height: 44px;
+  border-bottom: 1px solid #ddd; }
+  .listnice a li img {
+    width: 24px;
+    height: 24px;
+    margin: 0 8px 0 14px; }
+
+#tao img {
+  padding-top: 20px;
+  width: 182px;
+  height: auto; }
+
+.center {
+  margin-top: 10px;
+  margin-left: 8px;
+  width: 660px;
+  height: 412px;
+  float: left;
+  background: #404040; }
+
+.cen {
+  width: 660px;
+  height: 310px;
+  position: relative;
+  top: 0;
+  overflow: hidden; }
+
+.carousel {
+  width: 660px;
+  height: 380px; }
+  .carousel li {
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .carousel img {
+    width: 660px;
+    height: 310px; }
+
+.active {
+  position: absolute;
+  left: 296px;
+  top: 256px; }
+  .active li {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background: yellow;
+    border: 1px solid orange;
+    float: left;
+    border-radius: 50%;
+    margin: 0 2px;
+    cursor: pointer; }
+  .active .bot {
+    width: 660px;
+    height: 102px; }
+
+.pos {
+  width: 660px;
+  height: 102px;
+  background: #fff;
+  margin-bottom: 7px; }
+  .pos li {
+    width: 72px;
+    height: 56px;
+    float: left;
+    padding: 0 30px;
+    text-align: center;
+    margin-top: 15px; }
+    .pos li img {
+      width: 54px;
+      height: 54px; }
+
+.auto {
+  width: 660px;
+  height: auto; }
+  .auto .mainCount {
+    width: 660px;
+    height: 220px;
+    border-bottom: 1px solid #eee;
+    background: #fff; }
+    .auto .mainCount .ltCount img {
+      width: 190px;
+      height: 190px;
+      float: left;
+      padding: 15px 15px 15px 22px; }
+    .auto .mainCount .cenmain li {
+      float: left;
+      padding-top: 15px; }
+    .auto .mainCount .cenmain img {
+      padding-top: 17px;
+      margin-left: 6px; }
+    .auto .mainCount .cenmain h3 {
+      font-size: 16px;
+      font-weight: 100;
+      height: 24px;
+      margin-top: 12px; }
+      .auto .mainCount .cenmain h3 a {
+        color: #e93b78; }
+    .auto .mainCount .cenmain h4 {
+      font-weight: 100;
+      color: #337ab7;
+      font-size: 16px;
+      height: 32px; }
+      .auto .mainCount .cenmain h4 a:hover {
+        color: #2352a4; }
+    .auto .mainCount .cenmain p {
+      line-height: 24px;
+      font-size: 14px; }
+    .auto .mainCount .cenmain .small {
+      width: 296px;
+      margin-top: 20px;
+      font-size: 12px; }
+      .auto .mainCount .cenmain .small label {
+        color: red; }
+    .auto .mainCount .cenmain button {
+      width: 120px;
+      height: 32px;
+      background: red;
+      border: none;
+      border-radius: 6px;
+      margin-top: 19px; }
+      .auto .mainCount .cenmain button a {
+        color: #fcefff; }
+
+.right {
+  width: 276px;
+  height: auto;
+  float: left;
+  margin: 10px 0 0 8px; }
+  .right .heiwu {
+    width: 276px;
+    height: 36px;
+    border-bottom: 1px solid #eee;
+    background: #fff; }
+    .right .heiwu li {
+      float: left;
+      color: #e93b78;
+      padding: 8px 0 12px 28px; }
+    .right .heiwu .all {
+      float: right;
+      color: #337ab7;
+      padding: 8px 16px 0  0; }
+  .right .mainhei {
+    width: 276px;
+    height: 258px;
+    background: #fff;
+    border-bottom: #eee 1px solid; }
+    .right .mainhei li {
+      margin: 0 24px;
+      line-height: 22px; }
+    .right .mainhei img {
+      width: 247px;
+      height: 139px;
+      margin: 10px 15px 0 16px; }
+    .right .mainhei .sou {
+      font-size: 12px;
+      float: left;
+      margin-top: 10px; }
+    .right .mainhei .suo {
+      float: right;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #999; }
+      .right .mainhei .suo a {
+        color: #999;
+        margin-left: 10px; }
+
+.double {
+  width: 276px;
+  height: auto;
+  background: #fff;
+  margin-top: 12px; }
+  .double .cps {
+    width: 276px;
+    height: 50px;
+    border-bottom: 1px solid #eee; }
+    .double .cps li {
+      float: left;
+      font-size: 16px;
+      margin-top: 18px; }
+    .double .cps .more {
+      width: 45px;
+      height: 18px;
+      font-size: 12px;
+      border-radius: 10px;
+      background: black;
+      float: right;
+      margin-top: 18px;
+      text-align: center;
+      margin-right: 15px; }
+      .double .cps .more a {
+        color: #fff; }
+
+.official {
+  width: 276px;
+  height: 87px;
+  border-bottom: 1px solid #eee; }
+  .official img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    float: left;
+    margin: 20px 6px 30px 14px; }
+  .official .offCenter {
+    float: left; }
+    .official .offCenter h3 {
+      font-weight: 100;
+      font-size: 16px;
+      margin: 15px 80px 6px 0; }
+      .official .offCenter h3 a:hover {
+        color: #23527c; }
+    .official .offCenter p a {
+      color: #999; }
+  .official .offRight {
+    float: left; }
+    .official .offRight p {
+      color: red;
+      margin-top: 26px; }
+
+.sidebar {
+  position: fixed;
+  top: 222px;
+  right: 0; }
+  .sidebar div {
+    width: 40px;
+    height: 35px;
+    background: #666;
+    margin-bottom: 4px;
+    font-size: 12px;
+    border-radius: 4px;
+    text-align: center; }
+    .sidebar div button {
+      width: 40px;
+      height: 35px;
+      background: #666;
+      border-radius: 4px;
+      border: none;
+      color: #fff; }
+    .sidebar div a {
+      color: #fff; }
+  .sidebar .lastBar {
+    margin-top: 152px;
+    display: none; }
+    .sidebar .lastBar i {
+      line-height: 35px; }
+
+.diWearp {
+  width: 100%;
+  background: #333333;
+  overflow: hidden; }
+
+.bttom {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 1138px;
+  height: 120px;
+  margin: 0 auto;
+  background: #333333; }
+  .bttom .btmain {
+    color: red;
+    background: blue;
+    margin-left: 200px; }
+    .bttom .btmain li {
+      height: 120px;
+      float: left;
+      text-align: center;
+      line-height: 78px; }
+
+/*# sourceMappingURL=style.css.map */

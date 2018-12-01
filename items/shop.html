@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="font2/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+	</head>
+	<body>
+		<div class="topWearp">
+			<div id="top" class="top">
+				<div id="">
+					<ul id="" class="navUl">
+						<li><a href="http">海淘首页</a></li>
+						<li><a href="">关于我们</a></li>
+						<li id="mous"><a href="">世界时间</a></li>						
+					</ul>
+					<ul id="rightUl" class="rightUl">
+						<li>
+							<a href="">我的转运</a>
+							<ul>
+								<li><a href="">我的转运</a></li>
+								<li><a href="">转运仓库</a></li>
+								<li><a href="">到货预报</a></li>
+								<li><a href="">包裹管理</a></li>
+								<li><a href="">转运订单</a></li>
+								<li><a href="">包裹认领</a></li>
+							</ul>
+						</li>
+						<li><a href="">我的团购</a></li>
+						<li>
+							<a href="">我的赚钱</a>
+							<ul>
+								<li><a href="">我的赚钱</a></li>
+								<li><a href="">淘淘红包</a></li>
+								<li><a href="">返利打赏</a></li>
+								<li><a href="">转运红包</a></li>
+								<li><a href="">我的邀请</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">我的分享</a>
+							<ul>
+								<li><a href="">我的分享</a></li>
+								<li><a href="">写分享</a></li>
+								<li><a href="">我的收藏</a></li>
+							</ul>
+						</li>
+						<li><a href="">注册</a></li>
+						<li>
+							<a href="">登录</a>
+							<ul>
+								<li><a href="">登录</a></li>
+								<li><a href="">会员登录</a></li>
+								<li><a href="">微信登录</a></li>
+								<li><a href="">微博登录</a></li>
+								<li><a href="">QQ登录</a></li>
+							</ul>
+						</li>
+						
+					</ul>
+				</div>	
+			</div>
+		</div>
+		<!--------------------logo------seek--------------->
+		<div class="seekLogoWearp">
+			<div class="seekLogo" id="">
+				<a href=""><img src="img/logo.png"/></a>
+				<form action="" method="post">
+					<input type="text" placeholder="搜索全球" name="" id="input" value="" />					
+						<!--<button class="btn" type="submit"><i class="iconfont icon">&#xe644;</i></button>-->
+						<input type="button" value="&#xe644;" class="btn iconfont"/>
+						<!--<a href=""><span id="shopping"><i class="iconfont">&#xe622;购物车</i></span></a>-->
+						<button class="shopping"><i class="iconfont">&#xe622;购物车</i></button>	
+						
+				</form>
+			</div>
+		</div>
+		
+		<!--------------------nav--------------------------->
+		<div class="navWearp">
+			<div id="" class="nav">
+				<ul class="navlist">
+					<li><a href="">首页</a></li>
+					<li><a href="">值得买</a></li>
+					<li><a href="">返利</a></li>
+					<li><a href="">团购</a></li>
+					<li><a href="">转运</a></li>
+					<li><a href="">中国</a></li>
+					<li><a href="">美国</a></li>
+					<li><a href="">韩国</a></li>
+					<li><a href="">英国</a></li>
+					<li><a href="">澳洲</a></li>
+					<li><a href="">日本</a></li>
+				</ul>
+				<ul class="mine">
+					<li>
+						<!--<i class="iconfont min">&#xe60a;</i>-->
+						<a href="" class="mix">我的海淘</a>
+						
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-------------------购物车界面------------------>
+		<div id="" class="trolley">
+			<div class="LTtrolley">
+				<div id="box">
+					<div id="small" class="small">
+				         <img src="img/1m.jpg" alt=""/> 
+				         <img src="img/2m.jpg" alt=""/> 
+				         <img src="img/3m.jpg" alt=""/> 
+				         <img src="img/4m.jpg" alt=""/>
+				         <div id="layer"></div>
+				    	 <div id="mask"></div>   
+				    </div>
+				    <div id="big">
+						<img src="img/1b.jpg" class="bigImage"/>
+						<img src="img/2b.jpg" class="bigImage"/>
+						<img src="img/3b.jpg" class="bigImage"/>
+						<img src="img/4b.jpg" class="bigImage"/>
+					</div>
+					<ul id="bottom">
+				        <li><img src="img/1s.jpg" alt=""/></li>
+				        <li><img src="img/2s.jpg" alt=""/></li>
+				        <li><img src="img/3s.jpg" alt=""/></li>
+				        <li><img src="img/4s.jpg" alt=""/></li>
+				    </ul>
+				</div>
+			</div>
+			<div class="CEtrolley">
+				
+			</div>
+			<div class="RItrolley">
+				
+			</div>
+		</div>
+		
+		
+		
+	</body>
+</html>
+<script src="js/shop.js"></script>
+<script src="public.js" type="text/javascript" charset="utf-8"></script>
+<script src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+	$("#bottom li").mouseover(function(){
+		var index = $(this).index();
+		$("#small img").eq(index).show().siblings("img").hide();
+		$("#big img").eq(index).show().siblings().hide();
+		$("#mask").css("background","url(img/"+(index+1)+"m.jpg)")
+	})
+	//鼠标移入移出small盒子  显示或隐藏大图显示区big  和 mask
+	$("#small").on({
+		"mouseover":function(){
+			$("#big").show(500);
+			//$("#big").animate({})
+			$("#mask").show();
+			$("#layer").show();
+		},
+		"mouseout":function(){
+			$("#big").hide();
+			$("#mask").hide();
+			$("#layer").hide();
+		},
+		"mousemove":function(evt){
+			var e = evt || event;
+			var x = e.clientX - $("#small").offset().left - $("#mask").width()/2;
+			var y = e.clientY - $("#small").offset().top - $("#mask").height()/2;
+			
+			var mx = $("#small").width()  - $("#mask").width();
+			var my = $("#small").height()  - $("#mask").height();
+			
+			//边界处理
+			x = x<=0 ? 0 : x>=mx ? mx : x;
+			y = y<=0 ? 0 : y>=my ? my : y;
+			
+			//大图宽度/小图宽度 = 大图偏移 / mask的偏移
+			var bigImageX = -x * $(".bigImage").width() / $("#small").width();
+			var bigImageY = -y * $(".bigImage").height() / $("#small").height();
+			$("#mask").css({
+				"left":x + "px",
+				"top":y+"px",
+				"background-position-x":-x+"px",
+				"background-position-y":-y+"px"
+			})
+			
+			$(".bigImage").css({
+				"left" : bigImageX+"px",
+				"top" : bigImageY+"px"
+			})
+		}
+	})
+</script>

@@ -25,6 +25,7 @@
 			flagPwd = false;
 		}	
 	}
+	
 	//确认密码和密码相同
 	var flagQpwd = null;
 	$id("qpwd").onblur = function(){
@@ -49,6 +50,11 @@
 			$("#s1").html("不符合qq邮箱规范哦!");			
 			flagEmail = false;
 		}
+	}
+	//复选框
+	var flagEmpt = null;
+	$id("empt").onchange = function(){
+		
 	}
 	
 	//随机验证码        !!!有问题
@@ -76,8 +82,8 @@
 		}
 	}
 	
-	Btn.onclick = function(){
-		if( flagName ){
+	Btn.onclick = function(){	
+		if( flagName&&flagPwd&&flagQpwd){
 			//参数提出来  使用字符串模板
 			var data = `status=register&uname=${uname.value}&upwd=${upwd.value}`;
 			//console.log( data)//id的value可变的
@@ -85,8 +91,10 @@
 			ajax.open("GET","../php/login_register.php?"+data);		
 			ajax.send();
 			ajax.onreadystatechange = function(){
-				if( ajax.status == 200 && ajax.readyState == 4 ){					
+				if( ajax.status == 200 && ajax.readyState == 4 ){
+					
 					var res = ajax.responseText;
+					console.log(res)
 					if( res == 0 ){
 						alert( "用户名已存在" );
 					}else if( res == 1 ){
@@ -96,24 +104,13 @@
 						alert("注册失败");
 					}				
 				}
-			}			
+			}	
 		}
 	}	
-		/*if( flagName){		
-			return true;
-		}else{
-			return false;
-		}*/
-	
-
-	/*btnTi.onclick = function(){
-		if( flagName){		
-			return true;
-		}else{
-			return false;
-		}
-	}*/
-	
+//
+$("#btnlog").click(function(){
+	location.href="../php/register.html";
+})
 	
 	
 	

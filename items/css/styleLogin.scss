@@ -240,6 +240,33 @@ body{
            margin-left: 4px;
         }
         
+        
+    }
+    .ipnx{
+       width: 435px;
+       height: 32px; 
+       margin-top: 8px;
+       a{
+           width: 22px;
+           height: 22px;
+           border-radius: 50%;
+           float: left;
+           margin-top: 5px;
+           position: relative;
+          .dj{
+             position: absolute;
+             left: 0;
+             top: 0; 
+             display: none;
+          }
+       }
+       label{
+           float: left;
+           display: block;
+          line-height: 32px; 
+          margin-left: 8px;
+          font-size: 16px;
+       }
     }
     .btnTi{
             margin-top: 20px;
@@ -261,6 +288,14 @@ body{
             background: #fff;
             border-radius: 4px;
             
+        }
+        .btnreg{
+            width: 65px;
+            height: 32px;
+            border: none;
+            border: 1px solid #ccc;
+            background: #fff;
+            border-radius: 4px;   
         }
         .last{
             width: 80px;

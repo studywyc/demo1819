@@ -99,6 +99,29 @@
 				</ul>
 			</div>
 		</div>
+		
+		
+		<!--      大轮播          -->
+		<div class="biglb">			
+        	<ul>
+            	<li style="z-index: 6;"><img src="img/g5.jpg" alt=""/></li>
+           	 	<li style="z-index: 5;"><img src="img/g3.jpg" alt=""/></li>
+            	<li style="z-index: 4;"><img src="img/g1.jpg" alt=""/></li>
+            	<li style="z-index: 3;"><img src="img/g2.jpg" alt=""/></li>
+            	<li style="z-index: 2;"><img src="img/g4.jpg" alt=""/></li>
+        	</ul>
+        	<ol style="z-index: 10;" class="bo1">
+            	<li class="current">1</li>
+            	<li>2</li>
+            	<li>3</li>
+            	<li>4</li>
+            	<li>5</li>
+        </ol>
+    </div>
+		
+		
+		
+		
 		<!------------------main----------------------->
 			<div id="" class="main">
 				<div id="" class="leftlist">
@@ -130,14 +153,23 @@
 				<div id="" class="center">
 					<div class="cen">
 						<ul class="carousel">
-						<li style="z-index: 0; left: 0;"><img src="img/banner.jpg"/></li>
-						<li><img src="img/banner1.jpg"/></li>
-						<li><img src="img/banner2.jpg"/></li>
+						<li style="z-index: 6; "><img src="img/l6.jpg"/></li>
+						<li style="z-index: 6; "><img src="img/l3.jpg"/></li>
+						<li style="z-index: 5;"><img src="img/l4.jpg"/></li>
+						<li style="z-index: 4;"><img src="img/l1.jpg"/></li>
+						<li style="z-index: 3;"><img src="img/l.jpg"/></li>
+						<li style="z-index: 2;"><img src="img/banner.jpg"/></li>
+						<li style="z-index: 1;"><img src="img/banner1.jpg"/></li>
 					</ul>
-					<ol class="active">
-						<li>1</li>
+					<ol style="z-index: 20;" class="oul">
+						<li class="active">1</li>
 						<li>2</li>
 						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+					
 					</ol>
 					</div>
 					
@@ -153,6 +185,23 @@
 						</div>
 						<!-------------------mainCount--------轮播下--------------->
 						<div id="" class="auto">
+							
+							<div id="" class="mainCount">
+								<div id="" class="ltCount">
+									<li><a href="shop.html"><img src="img/shop.jpg"/></a></li>
+								</div>
+								<div id="" class="cenmain">
+									<li><a style="color: red;" href="shop.html">Bloomingdale's</a></li><img src="img/fanli.jpg"/>									
+									<br /><h3><a  href="shop.html">低价1449元起</a></h3>
+									<h4><a  href="shop.html">雅诗兰黛全线彩妆护肤热卖</a></h4>
+									<p>Bloomingdale's:Estee Lauder雅诗兰黛全线彩妆护肤热卖！1、满$370即赠7套
+									豪华礼包(价值$120)；2满$190赠送3套豪华礼包...</p>
+									<li class="small"><label>推荐</label> 拔草 两天前</li>
+									<button><a href="shop.html">详情咨询  ></a></button>
+								</div>							
+							</div>
+							
+							
 							<div id="" class="mainCount">
 								<div id="" class="ltCount">
 									<li><img src="img/f2.jpg"/></li>
@@ -289,10 +338,9 @@
 			
 			
 			<!----------------底部-------------------->
-			<div class="diWearp">
-				<div id="" class="bttom">
-					<div class="btmain">
-						<ul class="">
+			<div class="diWearp">	
+				<div class="btmain">
+					<ul class="">
 						<li>关于我们</li>
 						<li>网站守则</li>
 						<li>团购说明</li>
@@ -301,50 +349,22 @@
 					</ul>
 					<br />
 					<p>&copy;海淘网 沪ICP备 14025008号  网安必备31011502001285</p>
-					</div>
-					
 				</div>
 			</div>		
-	</body>
+	</body
 </html>
-<script src="js/comm.js"></script>
+
 <script src="js/public.js"></script>
 <script src="jquery-1.11.1.min.js"></script>
-<script type="text/javascript">
+<script src="shouye.js"></script>
+<script type="text/javascript">	
 	//top效果  下拉菜单
 	 $("#rightUl>li").mouseenter(function(){
 	 	$(this).children("ul").show();
 	 })
 	  $("#rightUl>li").mouseleave(function(){
 	 	$(this).children("ul").hide();
-	 })
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//侧边栏 ---- 点击按钮回到顶部
-	var $btn = $("#btn");
-	//当鼠标滑过顶部是  按钮出现
-	$(window).scroll(function(){
-		//获取页面滚走的距离
-		var stop = document.documentElement.scrollTop ||document.body.scrollTop;
-		if( stop > 32 ){
-			$(".lastBar").css("display","block");
-		}else{
-			$(".lastBar").css("display","none");
-		}
-	})
-	$btn.click(function(){
-		document.documentElement.scrollTop = document.body.scrollTop = 0;
-	})
+	 }) 
 	
 	//移入世界时间mous获取当前时间
 	/*$("#mous").mouseenter(function(){
@@ -352,21 +372,4 @@
 	})*/
 	
 	
-	//轮播
-	var timer = null;
-	var index = 0;
-	var $ulist = $(".carousel li");
-	var $olist = $(".active li");
-	timer = setInterval(autoPlay,2000);
-	function autoPlay(){
-		index++;
-		if( index == $olist.size() ){
-			index = 0;		
-		}
-		$olist.eq(index).addClass("active").siblings().removeClass("active");
-    	$ulist.eq(index).animate( {left : 0},1000 ,function(){
-    		$(this).css("zIndex",0).siblings().css({"zIndex":1,"left" : 660})
-    	})
-    	//console.log($ulist)
-	}
 </script>

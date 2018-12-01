@@ -36,8 +36,7 @@
 		$arr = mysql_fetch_array($ree);
 		if( $arr ){//如果数组里有用户名
 			echo 0;//用户名已存在 
-		}	
-	}else if($status =="register"){//如果是注册功能
+		}else{//如果是注册功能
 		//编写sql语句
 		$sql = "INSERT INTO `users`( `uname`, `upwd`) VALUES ('$uname','$upwd')";
 		//执行sql语句
@@ -47,5 +46,6 @@
 		}else{
 			echo 2;//注册失败
 		}
-	}
+	}	
+ }
 ?>

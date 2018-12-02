@@ -133,7 +133,6 @@ body{
 .biglb{
     width: 100%;
     height: 360px;
-    background: pink;
     overflow: hidden;
     position: relative;
     ul{
@@ -534,9 +533,10 @@ body{
 .trolley{
     @include public(678px);
     .LTtrolley{
-        width: 420px;
+        width: 400px;
         height: 678px;
         float: left;
+        background: #fff;
     #box{
         margin-top: 15px;
         margin-left: 20px;
@@ -600,6 +600,7 @@ body{
             position:absolute;
             top:0;
             left:0;
+            z-index: 20;
         }
         #small{
             position:relative;
@@ -626,16 +627,258 @@ body{
     .CEtrolley{
         width: 514px;
         height: 678px;
-        background: #0086B3;
         float: left;
-        margin-left: 10px;
+        background: #fff;
+        position: relative;
+       // overflow: hidden;
+        .rate{
+            line-height: 40px;
+            border-radius: 2px;
+            margin: 10px 0;
+        }
+        .site{
+            height: 46px;
+            line-height: 46px;
+            font-size: 14px;
+            span{
+                cursor:default;
+                i{
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+            button{
+                border: none;
+            }
+        }
+        .address{
+            width: 512px;
+            height: 208px;
+            border: 1px solid #404040;
+            position: absolute;
+            left: 0;
+            top: 160px;
+            display: none;
+            .zhe{
+                height: 35px;
+                background: #ccc;
+                p{
+                    width: 52px;
+                    height: 32px;
+                    line-height: 32px;
+                    
+                }
+            }
+            #Faddress{
+                width: 512px;
+                height: 208px;
+                background: #FFF;
+               li{
+                   float: left;
+                   margin-right: 25px;
+                   margin-top: 20px;
+                   cursor: default;
+                   border-radius: 4px;
+                   padding: 4px;
+                   font-size: 14px;
+               }
+            
+            }
+        }
+        .appraise{
+            width: 514px;
+            height: 40px;
+            border-top: 1px dashed #666;
+            border-bottom: 1px dashed #666;
+            font-size: 14px;
+            color: #999;
+            p{
+                float: left;
+                line-height: 40px;
+                
+            }
+            :nth-child(1){
+                width: 254px;
+                text-align: center;
+                
+               
+            }
+            :nth-child(3){
+                width: 254px;
+                text-align: center;
+            }
+        }
+        .colour{
+            height: 154px;
+            .classification{
+                width: 80px;
+                float: left;
+                height: 154px;
+                text-align: center;
+                font-size: 12px;
+                line-height: 40px;
+            }
+            .figure{              
+                ul{
+                    
+                    height: 154px;
+                    margin-top: 10px;                  
+                }
+                li{ 
+                    float: left;
+                    margin: 2px 4px;
+                }
+                img{
+                    display: block;
+                    width: 38px;
+                    height: 38px;
+                    border: 1px solid #ccc;
+                }
+            }
+            .amount{
+                height: 40px;
+                p{
+                    float: left;
+                    line-height: 40px;
+                }
+                .letter{
+                   margin-top: 5px;
+                   float: left;
+                   width: 100px;
+                   height: 30px;
+                   margin-left: 40px;
+                   input{
+                       width: 41px;
+                       height: 29px;
+                       border: 1px solid #ccc;
+                       float: left;
+                       text-align: center;
+                       line-height: 29px;
+                       
+                   }
+                   .but{
+                       width: 18px;
+                       height: 30px;
+                       float: left;
+                       a{
+                           width: 16px;
+                           height: 12px;
+                           display: block;
+                           border: 1px solid #ccc;
+                           line-height: 12px;
+                           margin-top: 1px;
+                           text-align: center;
+                           cursor: default;
+                       }
+                   }
+                   h5{
+                       margin: 5px;                     
+                   }
+                }
+            }
+          .btns{
+              width: 180px;
+              height: 40px;
+              background: #ffeded;
+              color: red;
+              border: 1px solid red;
+              margin: 24px 0 0 70px;
+          }
+          .pledge{
+             height: 40px;
+             margin-top: 40px;
+             position: relative;
+             label{
+                 line-height: 40px;
+                 font-size: 14px;
+                 float: left;
+                 a{
+                     margin-left: 10px;
+                 }
+             }
+             div{
+                 z-index: 30;
+                 line-height: 40px;
+                 font-size: 14px;
+                 float: right;
+                 cursor: default;
+                 label{
+                     position: absolute;
+                     top: 0;
+                     right: 18px;
+                 }
+                 i{
+                     
+                     font-weight: bold;
+                     font-size: 14px;
+                 }
+            }
+            .payment{
+                width: 189px;
+                height: 72px;
+                border: 1px solid #ccc;
+                position: absolute;
+                right: 0;
+                top: 10px;
+                display: none;
+                i{
+                    position: absolute;
+                    right: 0;
+                    top: -12px;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+                ul{
+                    margin-top: 16px;
+                }
+                li{
+                    height: 25px;
+                    float: left;
+                    margin-left: 13px;
+                    font-size: 14px;                   
+                }   
+
+            }
+         }
+            
+          
+          
+        }
     }
+    
+    
+    
+    
     .RItrolley{
-        width: 166px;
+        width:210px;
         height: 678px;
-        background: red;
         float: left;
-        margin-left: 15px;
+        background: #fff;
+        p{
+            font-size: 12px;
+            color: #ccc;
+        }
+        #topUl{
+            height: 540px;
+            overflow: hidden;
+                ul{
+                    height: 180px;
+                    margin-left: 20px;
+                } 
+            
+        } 
+        #botm_tb{
+            .botm_t{
+                margin-left: 35px;
+                font-size:30px ;
+                cursor: default;
+            }
+            .botm_b{
+                margin-left: 70px;
+                font-size:30px ;
+                cursor: default;
+            }
+        }      
     }
 }
 

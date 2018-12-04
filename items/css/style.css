@@ -89,7 +89,7 @@ body {
 }
 .seekLogo form input {
   width: 486px;
-  height: 40px;
+  height: 35px;
   border: 2px solid #de3c5b;
   margin-top: 22px;
 }
@@ -173,9 +173,9 @@ body {
   background-color: pink;
 }
 
-.main {
+.Cmain {
   width: 1138px;
-  height: 300px;
+  height: 1100px;
   margin: 0 auto;
 }
 
@@ -211,7 +211,7 @@ body {
   margin-top: 10px;
   margin-left: 8px;
   width: 660px;
-  height: 412px;
+  height: auto;
   float: left;
   background: #404040;
 }
@@ -268,7 +268,6 @@ body {
   width: 660px;
   height: 102px;
   background: #fff;
-  margin-bottom: 7px;
 }
 .pos li {
   width: 72px;
@@ -376,6 +375,7 @@ body {
   height: 258px;
   background: #fff;
   border-bottom: #eee 1px solid;
+  overflow: hidden;
 }
 .right .mainhei li {
   margin: 0 24px;
@@ -836,7 +836,7 @@ body {
   overflow: hidden;
 }
 .trolley .RItrolley #topUl ul {
-  height: 180px;
+  height: 540px;
   margin-left: 20px;
 }
 .trolley .RItrolley #botm_tb .botm_t {
@@ -848,6 +848,257 @@ body {
   margin-left: 70px;
   font-size: 30px;
   cursor: default;
+}
+
+.track {
+  width: 36px;
+  height: 100%;
+  background: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+}
+.track :nth-child(1) {
+  margin-top: 302px;
+  height: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+.track :nth-child(1) label {
+  display: none;
+  background: #333;
+  position: fixed;
+  top: 0;
+  right: 36px;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+}
+.track :nth-child(1):hover {
+  background: red;
+}
+.track :nth-child(2) {
+  margin-top: 10px;
+  height: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+.track :nth-child(2) label {
+  display: none;
+  position: fixed;
+  top: 40px;
+  right: 36px;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+}
+.track :nth-child(2):hover {
+  background: red;
+}
+
+.fntrolley {
+  width: 36px;
+  height: 100px;
+  background: red;
+  position: fixed;
+  right: 0;
+  top: 188px;
+  text-align: center;
+}
+.fntrolley :nth-child(1) {
+  cursor: default;
+}
+
+.lastBar {
+  width: 36px;
+  height: 40px;
+  background: black;
+  color: #fff;
+  position: fixed;
+  right: 0;
+  bottom: 30px;
+  line-height: 40px;
+  text-align: center;
+  display: none;
+}
+
+.commodity {
+  width: 1138px;
+  height: auto;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.comLT {
+  float: left;
+  width: 190px;
+  height: auto;
+}
+.comLT img {
+  display: block;
+}
+
+.Lauder {
+  width: 190px;
+  height: 190px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.Lauder li {
+  height: 48px;
+  border-bottom: 1px solid #ccc;
+  background: #fafafa;
+  text-align: center;
+  line-height: 48px;
+  font-size: 14px;
+}
+.Lauder li a {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  background: url(../img/m1.gif) no-repeat -83px -2px;
+}
+.Lauder div {
+  height: 141px;
+  background: #fff;
+}
+.Lauder div p {
+  float: left;
+  width: 18px;
+  height: 18px;
+  background: red;
+  color: yellow;
+  text-align: center;
+  line-height: 18px;
+  margin: 20px 0 0 50px;
+}
+.Lauder div span {
+  float: left;
+  font-size: 14px;
+  margin-left: 6px;
+  margin-top: 20px;
+  color: #999;
+}
+.Lauder label {
+  width: 72px;
+  height: 26px;
+  background: #999;
+  display: inline-block;
+  text-align: center;
+  line-height: 26px;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  margin-left: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+#main li {
+  float: left;
+}
+
+.comCEN {
+  float: left;
+  width: 740px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.Clauder {
+  border: 1px solid #ccc;
+  width: 738px;
+  height: 48px;
+  background: #fff;
+}
+.Clauder .moudel {
+  width: 160px;
+  height: 48px;
+  color: red;
+  background: #ccc;
+  display: inline-block;
+  float: right;
+  text-align: center;
+  line-height: 48px;
+}
+.Clauder :nth-child(1) {
+  float: left;
+  width: 88px;
+  height: 48px;
+  display: inline-block;
+  text-align: center;
+  line-height: 48px;
+}
+.Clauder :nth-child(2) {
+  text-align: center;
+  line-height: 48px;
+  float: left;
+  width: 130px;
+  height: 48px;
+  display: inline-block;
+}
+
+.brand {
+  width: 738px;
+  height: 222px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+.brand .brand_T {
+  height: 40px;
+  padding: 8px 20px 10px;
+  color: #666;
+}
+.brand p {
+  height: 22px;
+  padding: 5px 20px;
+  color: #666;
+}
+.brand ul {
+  height: 118px;
+  padding: 0 20px 18px;
+}
+.brand ul li {
+  display: inline;
+  float: left;
+  width: 210px;
+  height: 18px;
+  overflow: hidden;
+  margin: 10px 15px 0 0;
+  line-height: 18px;
+  vertical-align: top;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #666;
+}
+
+.shop_item {
+  height: auto;
+  background: #fff;
+}
+
+.mainTwo li {
+  float: left;
+}
+.mainTwo img {
+  width: 738px;
+}
+
+.comRIT {
+  float: left;
+  width: 180px;
+  height: 100%;
+  background: #fff;
+}
+.comRIT a {
+  display: block;
+  width: 180px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

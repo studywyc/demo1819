@@ -1,3 +1,4 @@
+
 var timer = null,
 		index = 0,
 		$ulist = $(".biglb ul li"),
@@ -52,13 +53,13 @@ var timer = null,
     		$(this).css("zIndex",0).siblings().css({"zIndex":1,"left" : 660})
     	})
     	//console.log($ulist)
-	}
+		}
 	}	
 	potplay();
 	
 
 //           放大镜       shop.html
-function fnBig(){
+function FdjShop(){
 	$("#bottom li").mouseover(function(){
 		var index = $(this).index();
 		$("#small img").eq(index).show().siblings("img").hide();
@@ -141,20 +142,24 @@ function fnCEtrolley(){
 	})
 }
 
-//---------   top 轮播图      ----------
+//---------   top 轮播图      ----------   ******************
 function fnLbt(){
 	var index = 0;
 	$(".botm_b").click(function(){
-		index++;
-		console.log($("#topUl li").size());
-		if(index == 7){
+		
+		index--;
+		console.log($("#topUl ul").size());
+		if(index >= 0){
 			$("#topUl ul").css("top",0);
 			index = 1;
+			console.log(index);
 		}
-		$("#topUl ul").stop().animate({"top":( -index*(180) )} , 400);
+		
+		$("#topUl ul").stop().animate({"top":( -index*(540) )} , 400);
 	})
 	
 	$(".botm_t").click(function(){
+		alert()
 		index--;
 		console.log($("#topUl li").size());
 		if( index == -1 ){
@@ -163,21 +168,138 @@ function fnLbt(){
 		}
 		$("#topUl ul").stop().animate({"top":( -index*(180) )} , 400);
 	})
-	
-	
-	
-	
+
 	$(".botm_t").mouseenter(function(){
 		$(this).css({"font-weight":"bolder","color":"#5f5959"})
 	}).mouseleave(function(){
-		$(this).css({"font-weight":"100","color":""})
-		
+		$(this).css({"font-weight":"100","color":""})		
 	})
 	$(".botm_b").mouseenter(function(){
 		$(this).css({"font-weight":"bolder","color":"#5f5959"})
 	}).mouseleave(function(){
 		$(this).css({"font-weight":"100","color":""})
 		
-	})
-	
+	})	
 }
+
+function Cbl(){	
+	$(".fntrolley").mouseenter(function(){
+		$(".track").stop().fadeToggle(800);
+	})
+	$("#scAll").mouseenter(function(){
+		$("#collect").fadeToggle(500)		
+	}).mouseleave(function(){
+		$("#collect").css("display","none")
+		
+	})
+	$(".track_d1").mouseenter(function(){
+		$("#lb1").fadeToggle(500);
+	}).mouseleave(function(){
+		$("#lb1").css("display","none");
+	})	
+}
+
+function fnData(){
+	var ajax = new XMLHttpRequest();
+	ajax.open("get","json/xqy.json");
+	ajax.send();
+	ajax.onreadystatechange = function(){
+		if( ajax.status == 200 && ajax.readyState == 4 ){
+			var arr = JSON.parse(ajax.responseText);
+			//console.log(arr);
+			var str = "";
+			for( var i = 0;i<arr.length;i++ ){
+				str+=`<li>
+						<img src="img/${arr[i].src}"/>
+					  </li>`;
+			}
+			main.innerHTML = str;
+		}
+	}
+}
+function fnShop(){
+	var ajax = new XMLHttpRequest();
+	ajax.open("get","json/shopXq.json");
+	ajax.send();
+	ajax.onreadystatechange =function(){
+		if( ajax.status == 200 && ajax.readyState == 4 ){
+			var arr = JSON.parse(ajax.responseText);
+			//console.log(arr);
+			var str = "";
+			for( var i = 0;i<arr.length; i++ ){
+				str += `<li>
+							<img src="img/${arr[i].src}"/>
+						</li>`;
+			}
+			mainTwo.innerHTML = str;
+			console.log(mainTwo)
+		}
+	}
+}
+
+function fnHome(){
+	var ajax = new XMLHttpRequest();
+	ajax.open("get","json/home.json");
+	ajax.send();
+	ajax.onreadystatechange =function(){
+		if( ajax.status == 200 && ajax.readyState == 4 ){
+			var arr = JSON.parse(ajax.responseText);
+			//console.log(arr);
+			var str = "";
+			for( var i = 0; i<arr.length;i++ ){
+				str +=`<div id="" class="mainCount">
+						<div id="" class="ltCount">
+							<li><a href="shop.html"><img src="img/${arr[i].src}"/></a></li>
+						</div>
+						<div id="" class="cenmain">
+							<li><a style="color: red;" href="shop.html">Bloomingdale's</a></li><img src="img/fanli.jpg"/>									
+							<br /><h3><a  href="shop.html">${arr[i].pic}</a></h3>
+							<h4><a  href="shop.html">${arr[i].pname}</a></h4>
+							<p>${arr[i].pcon}</p>
+							<li class="small"><label>推荐</label> 拔草 两天前</li>
+							<button><a href="shop.html">详情咨询  ></a></button>
+						</div>							
+							</div>`;
+			}
+			$(".auto").html(str);
+		}
+	}
+	
+	
+	/*var zoom = 1.03;
+	var z_width = $(".mainhei img").width()*zoom;
+	var z_height = $(".mainhei img").height()*zoom;
+	$(".mainhei img").mouseenter(function(){
+		$(this).animate({
+			width:z_width,
+			height:z_height,
+			marginTop:"-9px",
+			marginLeft:"-9px",
+			marginTop:"9px",
+			marginLeft:"9px",
+		},600);
+	})*/
+
+}
+
+//吸顶
+function dnXd(){
+	  $(window).scroll(function(){
+	  		//获取页面滚走的距离
+	  		var stop = document.documentElement.scrollTop ||document.body.scrollTop;
+	  		if( stop >809 ){
+	  			$(".Clauder").css({
+	  				"position":"fixed",
+	  				"top":0
+	  			}) 				
+	  		}else{
+	  			$(".Clauder").css({"position":"","width":"738px"});
+	  		}
+	  	})
+}
+
+//https://detail.tmall.com/item.htm?id=
+
+
+
+

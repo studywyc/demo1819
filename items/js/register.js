@@ -26,7 +26,8 @@
 	
 
 Btn.onclick = function(){
-	if( flagName&&flagPwd){
+	console.log( $("#empt").prop("checked") )
+	if( flagName&&flagPwd&&$("#empt").prop("checked")){
 		//参数提出来  使用字符串模板
 		var data = `status=login&uname=${uname.value}&upwd=${upwd.value}`;//id的value可变的
 		var ajax = new XMLHttpRequest();
@@ -37,12 +38,12 @@ Btn.onclick = function(){
 			var res = ajax.responseText;
 			if(res==1){
 				alert( "登录成功" );
-				location.href = "../index.html";
+				location.href = "../index.html";				
 			}else if(res==2 ){
 				alert("登录失败");
 			}else if(res==0){
 				alert("用户名不存在");
-				location.href = "login.html";
+				location.href = "register.html";
 			}
 		}
 		}	

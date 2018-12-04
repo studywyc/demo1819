@@ -1,3 +1,4 @@
+
 //会员名称
 	var flagName = null;
 	$id("uname").onblur = function(){//要求:单词字符组成  6--10位 ，不能用数字开头
@@ -51,28 +52,25 @@
 			flagEmail = false;
 		}
 	}
-	//复选框
-	var flagEmpt = null;
-	$id("empt").onchange = function(){
-		
-	}
 	
 	//随机验证码        !!!有问题
 	yz.innerHTML = yzm();
 	$("#btnYzm").click(function(){
 		$("#yz").html( yzm() );
 	})
+	
 	var flagYzm = null;
-/*	$("#yzm").blur(function(){
+	/*$("#yzm").blur(function(){
 		if($("#yzm").html(yzm()) ){
 			alert()
 		}else{
 			alert("no")
 		}
 	})*/
+	
 	$id("yzm").onblur = function(){
-		/*var yzmTxt = yzm.value;
-		var yzTxt = yz.value;*/
+		var yzmTxt = yzm.value;
+		var yzTxt = yz.value;
 		if( yzm.value = yz.innerHTML){
 			flagYzm = true;
 		}else{
@@ -82,8 +80,11 @@
 		}
 	}
 	
-	Btn.onclick = function(){	
-		if( flagName&&flagPwd&&flagQpwd){
+	$(".btnTi").click(function(){	
+		
+		// console.log( $("#empt").prop("checked") );//判断是否选中状态
+		
+		if( flagName&&flagPwd&&flagQpwd&&flagEmail&&$("#empt").prop("checked")){
 			//参数提出来  使用字符串模板
 			var data = `status=register&uname=${uname.value}&upwd=${upwd.value}`;
 			//console.log( data)//id的value可变的
@@ -106,7 +107,7 @@
 				}
 			}	
 		}
-	}	
+	})	
 //
 $("#btnlog").click(function(){
 	location.href="../php/register.html";

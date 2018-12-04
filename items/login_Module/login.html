@@ -113,20 +113,19 @@
 			<div class="formlg">
 				<a href=""><img src="../img/login1.jpg" /></a>
 			</div>
-					<div class="ip1" id="iunam"><label>账号</label><input type="text" id="uname" placeholder=" 会员名" /><span id="s1">
+					<div class="ip1" id="iunam"><label>会员名称</label><input type="text" id="uname" placeholder=" 会员名" /><span id="s1">
 						
 					</span></div>
-					<div class="ip1" id="iupwd"><label>密码</label><input type="password" id="upwd" placeholder=" 密 码" /></div>
+					<div class="ip1" id="iupwd"><label>登录密码</label><input type="password" id="upwd" placeholder=" 密 码" /></div>
+					<div class="ip1" id="iqpwd"><label>确认密码</label><input type="password" id="qpwd" placeholder=" 密 码" /></div>
+					<div class="ip1"><label>邮&nbsp;箱</label><input type="text" id="email" placeholder=" Emial邮箱" /></div>
 					<div class="ipn">
-						<input type="text" id="yzm" value=" 验证码" />
+						<input type="text" id="yzm" placeholder=" 验证码" />
 						<a href="javascript:;" id="btnYzm"><span id="yz" class="yz"></span></a>				
 					</div>
-					<div class="ipnx">
-						<a id="xuan"><img src="../img/xuan.png"/><img class="dj" id="dj" src="../img/xz.png"/></a><label>记住我</label>
-					</div>
-					<input type="button" id="Btn" class="btnTi" name="" value="登录" />
+					<input type="button" id="TBtn" class="btnTi" name="" value="提交注册" />
 					<div class="forget">
-						<input type="button" id="btnReg" class="btnreg " value="新人注册" /><input type="button" id="" class="last" value="忘记密码" />	
+						<input type="button" id="btnlog" class="enter"  value="登录" /><input type="button" id="" class="last" value="忘记密码" />	
 					</div>
 					<div class="consent">
 						<li><input type="checkbox" name="" id="empt" value="" />注册即代表同意并愿意遵守《<a href="">海淘网用户守则</a>》</li>
@@ -136,8 +135,7 @@
 				<li><a href=""><img style="width: 48px; height: 48px;" src="../img/qq.jpg"/><br />QQ登录</a></li>
 				<li><a href=""><img style="width: 48px; height: 48px; border-radius: 4px;" src="../img/xinliang.jpg"/><br />微博登录</a></li>
 			</div>
-		</div>	
-		
+		</div>			
 		<!------------------------bottom---------------------------------->
 		<div class="lgbomWarp">
 			<div class="lgbom">
@@ -151,27 +149,7 @@
 					<br />
 					<p style="color: #fff; text-align: center;margin-top: 42px;">&copy;海淘网 沪ICP备 14025008号  网安必备31011502001285</p>
 			</div>
-		</div>
-		
+		</div>		
 	</body>
 </html>
-<script src="../jquery-1.11.1.min.js"></script>
-<script src="../public.js"></script>
-<script src="../js/register.js"></script>
-<script type="text/javascript">
-	//侧边栏 ---- 点击按钮回到顶部
-	var $btn = $("#btn");
-	//当鼠标滑过顶部是  按钮出现
-	$(window).scroll(function(){
-		//获取页面滚走的距离
-		var stop = document.documentElement.scrollTop ||document.body.scrollTop;
-		if( stop > 32 ){
-			$(".lastBar").css("display","block");
-		}else{
-			$(".lastBar").css("display","none");
-		}
-	})
-	$btn.click(function(){
-		document.documentElement.scrollTop = document.body.scrollTop = 0;
-	})	
-</script>
+<script src="require.js" data-main="index"></script>

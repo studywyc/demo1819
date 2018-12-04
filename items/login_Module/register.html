@@ -118,7 +118,7 @@
 					</span></div>
 					<div class="ip1" id="iupwd"><label>密码</label><input type="password" id="upwd" placeholder=" 密 码" /></div>
 					<div class="ipn">
-						<input type="text" id="yzm" value=" 验证码" />
+						<input type="text" id="yzm" placeholder=" 验证码" />
 						<a href="javascript:;" id="btnYzm"><span id="yz" class="yz"></span></a>				
 					</div>
 					<div class="ipnx">
@@ -155,23 +155,4 @@
 		
 	</body>
 </html>
-<script src="../jquery-1.11.1.min.js"></script>
-<script src="../public.js"></script>
-<script src="../js/register.js"></script>
-<script type="text/javascript">
-	//侧边栏 ---- 点击按钮回到顶部
-	var $btn = $("#btn");
-	//当鼠标滑过顶部是  按钮出现
-	$(window).scroll(function(){
-		//获取页面滚走的距离
-		var stop = document.documentElement.scrollTop ||document.body.scrollTop;
-		if( stop > 32 ){
-			$(".lastBar").css("display","block");
-		}else{
-			$(".lastBar").css("display","none");
-		}
-	})
-	$btn.click(function(){
-		document.documentElement.scrollTop = document.body.scrollTop = 0;
-	})	
-</script>
+<script src="require.js" data-main="index"></script>

@@ -229,7 +229,7 @@
 				
 				</div>				
 			</div>
-			
+		
 			
 			
 			
@@ -238,25 +238,15 @@
 				<div id="topUl">
 					<ul>
 						<li><img src="img/a2.jpg"/><label style="margin-left:-110px;">¥232.00</label></li>			
-						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>
-					</ul>
-					<ul>
+						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>					
 						<li><img src="img/a3.jpg"/><label style="margin-left:-110px;">¥272.00</label></li>			
-						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>
-					</ul>
-					<ul>
+						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>				
 						<li><img src="img/a4.jpg"/><label style="margin-left:-110px;">¥212.00</label></li>			
-						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>
-					</ul>
-					<ul>
+						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>							
 						<li><img src="img/a5.jpg"/><label style="margin-left:-110px;">¥290.00</label></li>			
-						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>
-					</ul>
-					<ul>
+						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>					
 						<li><img src="img/a6.jpg"/><label style="margin-left:-110px;">¥132.00</label></li>			
-						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>
-					</ul>
-					<ul>
+						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>					
 						<li><img src="img/a7.jpg"/><label style="margin-left:-110px;">¥332.00</label></li>			
 						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>
 					</ul>				
@@ -266,20 +256,115 @@
 					<p><i class="iconfont botm_t">&#xe689;</i><i class="iconfont botm_b">&#xe576;</i></p>
 				</div>
 			</div>
+				
+		
+		</div>
+		<!--    侧边栏       -->
+		<div class="track">
+			<div class="track_d1" style="font-size: 20px;">
+				<label id="lb1" style="font-size: 14px;">我的资产</label>¥
+			</div>
+			<div id="scAll">
+				<label id="collect" style="font-size: 14px;background: #333;">我的收藏</label>
+				<i class="iconfont" id="myFont">&#xe60f;</i>
+			</div>
+		</div>
+		<div class="fntrolley">
+			<div><i class="iconfont" style="font-size: 20px;">&#xe622;<br></i>购<br />物<br />车</div>		
+		</div>
+		<div class="lastBar" id="btn">top</div>
+	</body>
+	<div class="commodity">
+		<div class="comLT">
+			<div class="Lauder">
+				<li>雅诗兰黛官方旗舰店 <a> </a></li>
+				<div>
+					<p>5</p>
+					<span>海淘5年店</span>
+					<label>进店逛逛</label>
+					<label>收藏店铺</label>
+				</div>
+			</div>
+			<ul id="main">
+				<!--<li>
+					<img src="img/1.jpg"/>		
+				</li>-->
+			</ul>
 		</div>
 		
+		<div class="comCEN">
+			<div class="Clauder">
+				<a>商品详情</a>
+				<a>累计评价1890</a>
+				<div class="moudel">手机购买</div>
+				
+			</div>
+			<div class="brand">
+				<div class="brand_T">品牌名称 ： Estee Lauder/雅诗兰黛</div>
+				<p>产品参数 : </p>
+				<ul>
+					<li>产品名称:Estee Lauder/雅诗兰黛...</li>
+					<li>品牌:Estee Lauder/雅诗兰黛</li>
+					<li>Estee Lauder/雅诗兰黛单品:倾慕唇膏魅..</li>
+					<li>产地:比利时</li>
+					<li>净含量:3.5g</li>
+					<li>颜色分类:420#13表姐豆沙色 520#25...</li>
+					<li>保质期:3年</li>
+					<li>适合肤质:任何肤质</li>
+					<li>功效:提升气色 易上色 滋润 自然立体</li>
+					<li>规格类型:正常规格</li>
+					<li>是否为特殊用途化妆品:否</li>
+					<li>限期使用日期范围:2020-01-01至2020...</li>					
+				</ul>
+			</div>
+			
+			<!--  json数据   -->
+			<div class="shop_item">
+				<ul class="mainTwo" id="mainTwo">
+					<!--<li>
+						<img src="img/q3.gif"/>
+					</li>-->
+				</ul>
+			</div>
+		</div>
 		
-		
-	</body>
+		<div class="comRIT">
+			<a>产品介绍</a>
+			<a>只是导读</a>
+			<a>品牌介绍</a>
+			<a>服务质量</a>
+			
+		</div>
+	</div>
 </html>
 
 <script src="public.js" type="text/javascript" charset="utf-8"></script>
 <script src="jquery-1.11.1.min.js"></script>
 <script src="shouye.js"></script>
 <script type="text/javascript">
+	 $("#rightUl>li").mouseenter(function(){
+	 	$(this).children("ul").show();
+	 })
+	  $("#rightUl>li").mouseleave(function(){
+	 	$(this).children("ul").hide();
+	 }) 
 	//放大镜
-	fnBig();
+	FdjShop();
 	fnCEtrolley();
 	//轮播
 	fnLbt();
+	//侧边栏
+	Cbl();
+	//请求json
+	fnData()
+	//json获取商品详情
+	fnShop();
+	
+	//首页加载请求json
+	fnHome();
+	
+	//吸顶
+	dnXd();
+	
+	//
 </script>

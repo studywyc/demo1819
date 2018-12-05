@@ -331,6 +331,7 @@ body{
               
           }
           .small{
+              
               width: 296px;
               margin-top: 20px;
               font-size: 12px;
@@ -533,8 +534,7 @@ body{
 //---------------------- 购  物  车  详 情 页 面  ----------------------//
 .trolley{
     @include public(678px);
-    
-    .LTtrolley{
+    .LTtrolley{ 
         width: 400px;
         height: 678px;
         float: left;
@@ -552,7 +552,7 @@ body{
            left: 0;
            width: 350px;
        }
-       li{
+       li{          
            float: left;
            border-top: none;
        }
@@ -560,7 +560,7 @@ body{
            width: 350px;
            height: 350px;
            img{
-               
+               //z-index: 30;
                position: absolute;
                top: 0;
                left: 0;
@@ -781,6 +781,14 @@ body{
               border: 1px solid red;
               margin: 24px 0 0 70px;
           }
+          .Rtns{
+              width: 180px;
+              height: 40px;
+              background: #ffeded;
+              color: red;
+              border: 1px solid red;
+              margin: 24px 0 0 10px;
+          }
           .pledge{
              height: 40px;
              margin-top: 40px;
@@ -851,19 +859,28 @@ body{
         height: 678px;
         float: left;
         background: #fff;
+        
         p{
             font-size: 12px;
             color: #ccc;
         }
-        #topUl{
-            height: 540px;
-            overflow: hidden;
-                ul{
-                    height: 540px;
-                    margin-left: 20px;
-                } 
+        #boxTop{
+            position: relative;
+           height: 540px;
+           overflow: hidden; 
+            .opUl{
+                position: absolute;
+                height: 540px;
             
-        } 
+                    li{
+                        height: 180px;
+                        margin-left: 20px;
+                        font-size: 12px;
+                        color: #ccc;
+                    } 
+            
+            } 
+        }
         #botm_tb{
             .botm_t{
                 margin-left: 35px;

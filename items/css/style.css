@@ -767,6 +767,14 @@ body {
   border: 1px solid red;
   margin: 24px 0 0 70px;
 }
+.trolley .CEtrolley .colour .Rtns {
+  width: 180px;
+  height: 40px;
+  background: #ffeded;
+  color: red;
+  border: 1px solid red;
+  margin: 24px 0 0 10px;
+}
 .trolley .CEtrolley .colour .pledge {
   height: 40px;
   margin-top: 40px;
@@ -831,13 +839,20 @@ body {
   font-size: 12px;
   color: #ccc;
 }
-.trolley .RItrolley #topUl {
+.trolley .RItrolley #boxTop {
+  position: relative;
   height: 540px;
   overflow: hidden;
 }
-.trolley .RItrolley #topUl ul {
+.trolley .RItrolley #boxTop .opUl {
+  position: absolute;
   height: 540px;
+}
+.trolley .RItrolley #boxTop .opUl li {
+  height: 180px;
   margin-left: 20px;
+  font-size: 12px;
+  color: #ccc;
 }
 .trolley .RItrolley #botm_tb .botm_t {
   margin-left: 35px;

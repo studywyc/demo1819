@@ -19,23 +19,51 @@ var timer = null,
 	}).mouseleave( function(){
 		timer = setInterval( autoPlay , 2000 );
 	} )
-	
+
+
 //侧边栏 ---- 点击按钮回到顶部
-	var $btn = $("#btn");
-	//当鼠标滑过顶部是  按钮出现
-	$(window).scroll(function(){
-		//获取页面滚走的距离
-		var stop = document.documentElement.scrollTop ||document.body.scrollTop;
-		if( stop > 32 ){
-			$(".lastBar").css("display","block");
-		}else{
-			$(".lastBar").css("display","none");
-		}
-	})
-	$btn.click(function(){
+new fnScro().init();
+function fnScro(){
+	this.body = $(".sidebar");	
+	this.down = $(".lastBar");
+	this.btn = $("#btn");
+	this.init = function(){
+		$(window).scroll(function(){
+			this.stop = document.documentElement.scrollTo()||document.body.scrollTop;
+			if( this.stop > 32 ){
+				this.down.css("display","block");
+			}else{
+				this.down.css("display","none");
+			}
+		}.bind(this))
+	}
+	this.btn.click(function(){
 		document.documentElement.scrollTop = document.body.scrollTop = 0;
 	})
-	
+}
+/*new fnSmallFdj().init();
+function fnSmallFdj(){
+	this.body = $(".cen");
+	this.ulist = $(".carousel li");
+	this.olist = $("oul li");
+	this.timer = 0;
+	this.index = 0;
+	this.init = ()=>{
+		this.timer = setInterval(autoPlay(),2000);
+		console.log(this.timer)
+		function autoPlay(){
+			this.index++;
+			if( this.index == this.olist.size() ){
+				this.index = 0;
+			}
+			this.olist.eq(this.index).addClass("active").siblings().removeClass("active");
+			this.ulist.eq(this.index).animate( {left : 0},1000,function(){
+				this.ulist.css("z-index",0).siblings().css({"z-index":1,"left":660})
+			} ) 	
+		}
+	}
+}*/
+//fnSmallFdj();
 //轮播
 	function potplay(){
 	var timer = null;
@@ -46,7 +74,7 @@ var timer = null,
 	function autoPlay(){
 		index++;
 		if( index == $olist.size() ){
-			index = 0;		
+			index = 0;	
 		}
 		$olist.eq(index).addClass("active").siblings().removeClass("active");
     	$ulist.eq(index).animate( {left : 0},1000 ,function(){
@@ -106,10 +134,74 @@ function FdjShop(){
 			})
 		}
 	})
+}
+//放大镜         bug
+function Gshop(){
+	var body = location.href;
+	var id = body.split("=")[1];
+	var ajax = new XMLHttpRequest();
+	ajax.open("get","json/home.json");
+	ajax.send();
+	ajax.onreadystatechange =function(arr){
+		if( ajax.status == 200 && ajax.readyState == 4 ){
+			var arr = JSON.parse(ajax.responseText);
+			var str = "";
+			var suv = "";
+			var sum = "";
+			for( var i = 0 ; i < arr.length ; i++ ){
+				if( id == arr[i].src ){					
+				str +=`<img src="img/${arr[i].s1}" alt=""/>
+				         <img src="img/${arr[i].s2}" alt=""/> 
+				         <img src="img/${arr[i].s3}" alt=""/> 
+				         <img src="img/${arr[i].s4}" alt=""/>
+				         <div id="layer"></div>
+				    	 <div id="mask"></div>`;   	 
+				sum +=`<img src="img/${arr[i].b1}" class="bigImage"/>
+						<img src="img/${arr[i].b2}" class="bigImage"/>
+						<img src="img/${arr[i].b3}" class="bigImage"/>
+						<img src="img/${arr[i].b4}" class="bigImage"/>` ;
+						
+				suv +=`<li><img src="img/${arr[i].d1}" alt=""/></li>
+				        <li><img src="img/${arr[i].d2}" alt=""/></li>
+				        <li><img src="img/${arr[i].d3}" alt=""/></li>
+				        <li><img src="img/${arr[i].d4}" alt=""/></li>`;
+				}				
+			}
+			$(".small").html(str);	
+			$("#big").html(sum);
+			$("#bottom").html(suv);
+		}
 	}
+}
+Gshop();
+function fnHome(){
+	var ajax = new XMLHttpRequest();
+	ajax.open("get","json/home.json");
+	ajax.send();
+	ajax.onreadystatechange =function(arr){
+		if( ajax.status == 200 && ajax.readyState == 4 ){
+			var arr = JSON.parse(ajax.responseText);
+			var str = "";
+			for( var i = 0; i<arr.length;i++ ){
+				str +=`<div id="" class="mainCount">
+						<div id="" class="ltCount">
+						<li><a href="shop.html?id=${arr[i].src}"><img src="img/${arr[i].src}"/></a></li>
+						</div>
+						<div id="" class="cenmain">
+						<li><a style="color: red;" href="">Bloomingdale's</a></li><img src="img/fanli.jpg"/>									
+						<br /><h3><a  href="">${arr[i].pic}</a></h3>
+						<h4><a  href="">${arr[i].pname}</a></h4>
+						<p>${arr[i].pcon}</p>
+						<li class="small"><label>推荐</label> 拔草 两天前</li>
+						<button><a href="">详情咨询  ></a></button>
+						</div>							
+						</div>`;
+			}
+			$(".auto").html(str);
+		}
+	}
+}	
 
-
-//   fnCEtrolley
 function fnCEtrolley(){
 	//点击请选择地址显示下拉菜单
 	$("#select span").click(function(){
@@ -142,71 +234,80 @@ function fnCEtrolley(){
 	})
 }
 
-//---------   top 轮播图      ----------   ******************
-function fnLbt(){
-	var index = 0;
-	$(".botm_b").click(function(){
+//---------  详情页右侧 top 轮播图      ----------   ******************
+new fnTopLb().init();
+function fnTopLb(){
+	this.body = $("#boxTop");
+	this.Lbtn = $(".botm_b");
+	this.Rbtn = $(".botm_t");
+	this.oUl = $(".opUl");
+	this.index = 0;
+	this.init = ()=>{
+		this.index++;
+		this.Lbtn.click(function(){
+			if( this.index <= 1 ){
+				this.oUl.stop().animate({"top" : -this.index*540},800);
+			}else{
+				this.index--;
+			}
+		}.bind(this))
 		
-		index--;
-		console.log($("#topUl ul").size());
-		if(index >= 0){
-			$("#topUl ul").css("top",0);
-			index = 1;
-			console.log(index);
-		}
+		this.Rbtn.click(function(){
+			this.index--;
+			if( this.index >= 0 ){
+				this.oUl.stop().animate({"top":-this.index*540},800);
+			}else{
+				index++;
+			}
+		}.bind(this))
+		//上下箭头移入移出
+		this.Rbtn.mouseenter(function(){
+			this.Rbtn.css({"font-weight":"bolder","color":"#5f5959"})
+		}.bind(this)).mouseleave(function(){
+			this.Rbtn.css({"font-weight":"100","color":""})
+		}.bind(this))
 		
-		$("#topUl ul").stop().animate({"top":( -index*(540) )} , 400);
-	})
-	
-	$(".botm_t").click(function(){
-		alert()
-		index--;
-		console.log($("#topUl li").size());
-		if( index == -1 ){
-			$("#topUl ul").css("top",-1080);
-			index = 5;
-		}
-		$("#topUl ul").stop().animate({"top":( -index*(180) )} , 400);
-	})
-
-	$(".botm_t").mouseenter(function(){
-		$(this).css({"font-weight":"bolder","color":"#5f5959"})
-	}).mouseleave(function(){
-		$(this).css({"font-weight":"100","color":""})		
-	})
-	$(".botm_b").mouseenter(function(){
-		$(this).css({"font-weight":"bolder","color":"#5f5959"})
-	}).mouseleave(function(){
-		$(this).css({"font-weight":"100","color":""})
-		
-	})	
+		this.Lbtn.mouseenter(function(){
+			this.Lbtn.css({"font-weight":"bolder","color":"#5f5959"})
+		}.bind(this)).mouseleave(function(){
+			this.Lbtn.css({"font-weight":"100","color":""})
+		}.bind(this))
+	}
 }
 
-function Cbl(){	
-	$(".fntrolley").mouseenter(function(){
-		$(".track").stop().fadeToggle(800);
-	})
-	$("#scAll").mouseenter(function(){
-		$("#collect").fadeToggle(500)		
-	}).mouseleave(function(){
-		$("#collect").css("display","none")
+new Cbl().init();
+function Cbl(){
+	this.body = $(".track");
+	this.troll = $(".fntrolley");
+	this.all = $("#scAll");
+	this.coll = $("#collect");
+	this.lb1 = $("#lb1");
+	this.d1 = $(".track_d1");
+	this.init =()=>{
+		this.troll.mouseenter(function(){
+			this.body.fadeToggle(800)
+		}.bind(this))
 		
-	})
-	$(".track_d1").mouseenter(function(){
-		$("#lb1").fadeToggle(500);
-	}).mouseleave(function(){
-		$("#lb1").css("display","none");
-	})	
+		this.all.mouseenter(function(){
+			this.coll.fadeToggle(500)
+		}.bind(this)).mouseleave(function(){
+			this.coll.css("display","none");
+		}.bind(this))
+		this.d1.mouseenter(function(){
+			this.lb1.fadeToggle(500)
+		}.bind(this)).mouseleave(function(){
+			this.lb1.css("display","none");
+		}.bind(this))
+		
+	}
 }
-
 function fnData(){
 	var ajax = new XMLHttpRequest();
 	ajax.open("get","json/xqy.json");
 	ajax.send();
-	ajax.onreadystatechange = function(){
+	ajax.onreadystatechange = function(){ 
 		if( ajax.status == 200 && ajax.readyState == 4 ){
 			var arr = JSON.parse(ajax.responseText);
-			//console.log(arr);
 			var str = "";
 			for( var i = 0;i<arr.length;i++ ){
 				str+=`<li>
@@ -217,6 +318,7 @@ function fnData(){
 		}
 	}
 }
+
 function fnShop(){
 	var ajax = new XMLHttpRequest();
 	ajax.open("get","json/shopXq.json");
@@ -224,7 +326,6 @@ function fnShop(){
 	ajax.onreadystatechange =function(){
 		if( ajax.status == 200 && ajax.readyState == 4 ){
 			var arr = JSON.parse(ajax.responseText);
-			//console.log(arr);
 			var str = "";
 			for( var i = 0;i<arr.length; i++ ){
 				str += `<li>
@@ -232,56 +333,22 @@ function fnShop(){
 						</li>`;
 			}
 			mainTwo.innerHTML = str;
-			console.log(mainTwo)
 		}
 	}
 }
-
-function fnHome(){
-	var ajax = new XMLHttpRequest();
-	ajax.open("get","json/home.json");
-	ajax.send();
-	ajax.onreadystatechange =function(){
-		if( ajax.status == 200 && ajax.readyState == 4 ){
-			var arr = JSON.parse(ajax.responseText);
-			//console.log(arr);
-			var str = "";
-			for( var i = 0; i<arr.length;i++ ){
-				str +=`<div id="" class="mainCount">
-						<div id="" class="ltCount">
-							<li><a href="shop.html"><img src="img/${arr[i].src}"/></a></li>
-						</div>
-						<div id="" class="cenmain">
-							<li><a style="color: red;" href="shop.html">Bloomingdale's</a></li><img src="img/fanli.jpg"/>									
-							<br /><h3><a  href="shop.html">${arr[i].pic}</a></h3>
-							<h4><a  href="shop.html">${arr[i].pname}</a></h4>
-							<p>${arr[i].pcon}</p>
-							<li class="small"><label>推荐</label> 拔草 两天前</li>
-							<button><a href="shop.html">详情咨询  ></a></button>
-						</div>							
-							</div>`;
-			}
-			$(".auto").html(str);
-		}
-	}
-	
-	
 	/*var zoom = 1.03;
 	var z_width = $(".mainhei img").width()*zoom;
 	var z_height = $(".mainhei img").height()*zoom;
 	$(".mainhei img").mouseenter(function(){
 		$(this).animate({
-			width:z_width,
-			height:z_height,
-			marginTop:"-9px",
-			marginLeft:"-9px",
-			marginTop:"9px",
-			marginLeft:"9px",
+			"width":"z_width",
+			"height":"z_height",
+			"marginTop":"-9px",
+			"marginLeft":"-9px",
+			"marginTop":"9px",
+			"marginLeft":"9px",
 		},600);
 	})*/
-
-}
-
 //吸顶
 function dnXd(){
 	  $(window).scroll(function(){
@@ -297,8 +364,8 @@ function dnXd(){
 	  		}
 	  	})
 }
+dnXd();
 
-//https://detail.tmall.com/item.htm?id=
 
 
 

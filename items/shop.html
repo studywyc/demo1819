@@ -129,9 +129,9 @@
 				        <li><img src="img/3s.jpg" alt=""/></li>
 				        <li><img src="img/4s.jpg" alt=""/></li>
 				    </ul>
-				</div>
-				
+				</div>				
 			</div>
+			
 			<div class="CEtrolley">
 				<h3 style="margin-top: 15px;">【超级品牌日】雅诗兰黛唇膏口红 倾慕魅色唇膏 保湿滋润 防水 </h3>
 				<p style="color: red;">持久滋润 丰唇塑型 魅色出众</p>
@@ -199,16 +199,17 @@
 					<div class="amount">
 						<p>数量</p>
 						<div class="letter">
-							<input type="text" name="" id="" value="1" />
+							<input type="text" name="" id="plus" value="1" />
 							<div class="but">
-								<a>+</a>
-								<a>-</a>
+								<a id="add">+</a>
+								<a id="subtract">-</a>
 							</div>
 							<h5>件</h5>
 						</div>
 					</div>
 				
 				<button class="btns">立即购买</button>
+				<button class="Rtns">加入购物车</button>
 				<div class="pledge">
 					<label><a>服务承诺</a><a>过敏包退</a><a>正品保证</a><a>极速退款</a></label>
 					<div id="btna">
@@ -228,28 +229,45 @@
 				
 				
 				</div>				
-			</div>
-		
-			
-			
-			
+			</div>		
 			<div class="RItrolley">
 				<p style="margin:15px 0; text-align: center;">------- 看了又看 ------</p>
 				<div id="topUl">
-					<ul>
-						<li><img src="img/a2.jpg"/><label style="margin-left:-110px;">¥232.00</label></li>			
-						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>					
-						<li><img src="img/a3.jpg"/><label style="margin-left:-110px;">¥272.00</label></li>			
-						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>				
-						<li><img src="img/a4.jpg"/><label style="margin-left:-110px;">¥212.00</label></li>			
-						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>							
-						<li><img src="img/a5.jpg"/><label style="margin-left:-110px;">¥290.00</label></li>			
-						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>					
-						<li><img src="img/a6.jpg"/><label style="margin-left:-110px;">¥132.00</label></li>			
-						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>					
-						<li><img src="img/a7.jpg"/><label style="margin-left:-110px;">¥332.00</label></li>			
-						<p>雅诗兰黛唇膏口红 倾慕魅色唇...</p>
+					<div id="boxTop">
+					<ul class="opUl">
+						<li>
+							<img src="img/a2.jpg"/>
+							<label style="margin-left:-110px;">¥232.00</label></br>
+							雅诗兰黛唇膏口红 倾慕魅色唇...
+						</li>			
+						<li>
+							<img src="img/a3.jpg"/>
+							<label style="margin-left:-110px;">¥272.00</label></br>
+							雅诗兰黛唇膏口红 倾慕魅色唇...			
+						</li>			
+						<li>
+							<img src="img/a4.jpg"/>
+							<label style="margin-left:-110px;">¥212.00</label></br>
+							雅诗兰黛唇膏口红 倾慕魅色唇...
+						</li>			
+						<li>
+							<img src="img/a5.jpg"/>
+							<label style="margin-left:-110px;">¥290.00</label></br>
+							雅诗兰黛唇膏口红 倾慕魅色唇...				
+						</li>			
+						<li>
+							<img src="img/a6.jpg"/>
+							<label style="margin-left:-110px;">¥132.00</label></br>
+							雅诗兰黛唇膏口红 倾慕魅色唇...						
+						</li>			
+						<li>
+							<img src="img/a7.jpg"/>
+							<label style="margin-left:-110px;">¥332.00</label></br>
+							雅诗兰黛唇膏口红 倾慕魅色唇...				
+						</li>			
 					</ul>				
+						
+					</div>
 				</div>
 				
 				<div id="botm_tb">
@@ -270,10 +288,10 @@
 			</div>
 		</div>
 		<div class="fntrolley">
-			<div><i class="iconfont" style="font-size: 20px;">&#xe622;<br></i>购<br />物<br />车</div>		
+			<div id="sp"><i class="iconfont" style="font-size: 20px;">&#xe622;<br></i>购<br />物<br />车</div>		
 		</div>
 		<div class="lastBar" id="btn">top</div>
-	</body>
+	
 	<div class="commodity">
 		<div class="comLT">
 			<div class="Lauder">
@@ -336,11 +354,13 @@
 			
 		</div>
 	</div>
+	</body>
 </html>
 
 <script src="public.js" type="text/javascript" charset="utf-8"></script>
 <script src="jquery-1.11.1.min.js"></script>
 <script src="shouye.js"></script>
+<script src="js/main.js"></script>
 <script type="text/javascript">
 	 $("#rightUl>li").mouseenter(function(){
 	 	$(this).children("ul").show();
@@ -351,10 +371,6 @@
 	//放大镜
 	FdjShop();
 	fnCEtrolley();
-	//轮播
-	fnLbt();
-	//侧边栏
-	Cbl();
 	//请求json
 	fnData()
 	//json获取商品详情
@@ -366,5 +382,5 @@
 	//吸顶
 	dnXd();
 	
-	//
+	fnScro();
 </script>

@@ -110,12 +110,12 @@
 			<div class="LTtrolley">
 				<div id="box">
 					<div id="small" class="small">
-				         <img src="img/1m.jpg" alt=""/> 
+				         <!--<img src="img/1m.jpg" alt=""/> 
 				         <img src="img/2m.jpg" alt=""/> 
 				         <img src="img/3m.jpg" alt=""/> 
 				         <img src="img/4m.jpg" alt=""/>
 				         <div id="layer"></div>
-				    	 <div id="mask"></div>   
+				    	 <div id="mask"></div>   -->
 				    </div>
 				    <div id="big">
 						<img src="img/1b.jpg" class="bigImage"/>
@@ -133,10 +133,10 @@
 			</div>
 			
 			<div class="CEtrolley">
-				<h3 style="margin-top: 15px;">【超级品牌日】雅诗兰黛唇膏口红 倾慕魅色唇膏 保湿滋润 防水 </h3>
+				<h3 id="pname"  style="margin-top: 15px;">【超级品牌日】雅诗兰黛唇膏口红 倾慕魅色唇膏 保湿滋润 防水 </h3>
 				<p style="color: red;">持久滋润 丰唇塑型 魅色出众</p>
 				<div class="rate" style="background: #e5e4e4;height: 40px;">
-					<label style="color: #ae99ae;">价格</label><span style="color: red;margin-left: 40px;font-size: 18px;">¥270.00</span>
+					<label style="color: #ae99ae;">价格</label><span id="get" style="color: red;margin-left: 40px;font-size: 18px;">¥270.00</span>
 				</div>
 				<!-- 地址  -->
 				<div class="site" id="select" >
@@ -209,7 +209,7 @@
 					</div>
 				
 				<button class="btns">立即购买</button>
-				<button class="Rtns">加入购物车</button>
+				<button data-pid=1 class="Rtns">加入购物车</button>
 				<div class="pledge">
 					<label><a>服务承诺</a><a>过敏包退</a><a>正品保证</a><a>极速退款</a></label>
 					<div id="btna">
@@ -360,7 +360,6 @@
 <script src="public.js" type="text/javascript" charset="utf-8"></script>
 <script src="jquery-1.11.1.min.js"></script>
 <script src="shouye.js"></script>
-<script src="js/main.js"></script>
 <script type="text/javascript">
 	 $("#rightUl>li").mouseenter(function(){
 	 	$(this).children("ul").show();
@@ -383,4 +382,5 @@
 	dnXd();
 	
 	fnScro();
+	
 </script>

@@ -80,7 +80,6 @@ function fnSmallFdj(){
     	$ulist.eq(index).animate( {left : 0},1000 ,function(){
     		$(this).css("zIndex",0).siblings().css({"zIndex":1,"left" : 660})
     	})
-    	//console.log($ulist)
 		}
 	}	
 	potplay();
@@ -135,11 +134,14 @@ function FdjShop(){
 		}
 	})
 }
-//放大镜         bug
+//放大镜         ***
 function Gshop(){
 	var body = location.href;
 	var id = body.split("=")[1];
 	var ajax = new XMLHttpRequest();
+	var small = $("#small");
+	var big = $("#big");
+	var bottom = $("#bottom");
 	ajax.open("get","json/home.json");
 	ajax.send();
 	ajax.onreadystatechange =function(arr){
@@ -167,14 +169,27 @@ function Gshop(){
 				        <li><img src="img/${arr[i].d4}" alt=""/></li>`;
 				}				
 			}
-			$(".small").html(str);	
+			$("#small").html(str);	
 			$("#big").html(sum);
 			$("#bottom").html(suv);
+			
+			$("#bottom").on( "mouseenter" , "li", function(){
+				var index = $(this).index();
+				$("#small img").eq(index).show().siblings("img").hide();
+				$("#big img").eq(index).show().siblings().hide();
+				$("#mask").css("background","url(img/"+(index+1)+"m.jpg)")//***index+5m
+			} )
+			
 		}
+		
 	}
+	
+	
 }
 Gshop();
+
 function fnHome(){
+	var pageNum = 1;
 	var ajax = new XMLHttpRequest();
 	ajax.open("get","json/home.json");
 	ajax.send();
@@ -201,6 +216,7 @@ function fnHome(){
 		}
 	}
 }	
+
 
 function fnCEtrolley(){
 	//点击请选择地址显示下拉菜单
@@ -301,6 +317,7 @@ function Cbl(){
 		
 	}
 }
+
 function fnData(){
 	var ajax = new XMLHttpRequest();
 	ajax.open("get","json/xqy.json");
@@ -336,19 +353,7 @@ function fnShop(){
 		}
 	}
 }
-	/*var zoom = 1.03;
-	var z_width = $(".mainhei img").width()*zoom;
-	var z_height = $(".mainhei img").height()*zoom;
-	$(".mainhei img").mouseenter(function(){
-		$(this).animate({
-			"width":"z_width",
-			"height":"z_height",
-			"marginTop":"-9px",
-			"marginLeft":"-9px",
-			"marginTop":"9px",
-			"marginLeft":"9px",
-		},600);
-	})*/
+
 //吸顶
 function dnXd(){
 	  $(window).scroll(function(){
@@ -365,6 +370,7 @@ function dnXd(){
 	  	})
 }
 dnXd();
+
 
 
 

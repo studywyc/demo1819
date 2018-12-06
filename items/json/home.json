@@ -1,10 +1,29 @@
 [
 	{
 		"pid":"1",
-		"src" : "h8.jpg",
+		"src" : "shop.jpg",
 		"pic" : "低价799元起",
 		"pname" : "雅诗兰黛全线彩妆护肤热卖",
 		"pcon" : "Bloomingdale's:Estee Lauder雅诗兰黛全线彩妆护肤热卖！1、满$370即赠7套豪华礼包(价值$120)；2满$190赠送3套豪华礼包...",
+		"s1" : "1m.jpg",
+		"s2" : "2m.jpg",
+		"s3" : "3m.jpg",
+		"s4" : "4m.jpg",
+		"b1" : "1b.jpg",
+		"b2" : "2b.jpg",
+		"b3" : "3b.jpg",
+		"b4" : "4b.jpg",
+		"d1" : "1s.jpg",
+		"d2" : "2s.jpg",
+		"d3" : "3s.jpg",
+		"d4" : "4s.jpg"
+	},   
+	{
+		"pid":"2",
+		"src" : "s4.jpg",
+		"pic" : "低价799元起",
+		"pname" : "雅诗兰黛全线彩妆护肤热卖",
+		"pcon" : "Bloomingdale's:Estee Lauder雅诗兰黛全线彩妆护肤热卖！1、满$370即赠7套豪华礼包(价值$120)；2满$190赠送3套豪华礼包...",	
 		"s1" : "s1.jpg",
 		"s2" : "s2.jpg",
 		"s3" : "s3.jpg",
@@ -16,22 +35,28 @@
 		"d1" : "d1.jpg",
 		"d2" : "d2.jpg",
 		"d3" : "d3.jpg",
-		"d4" : "d4.jpg"	
-	},   
-	{
-		"pid":"2",
-		"src" : "shop.jpg",
-		"pic" : "低价799元起",
-		"pname" : "雅诗兰黛全线彩妆护肤热卖",
-		"pcon" : "Bloomingdale's:Estee Lauder雅诗兰黛全线彩妆护肤热卖！1、满$370即赠7套豪华礼包(价值$120)；2满$190赠送3套豪华礼包..."		
+		"d4" : "d4.jpg"		
 	},
 	
 	{
 		"pid":"3",
-		"src" : "h1.jpg",
+		"src" : "8m.jpg",
 		"pic" : "爆款499",
 		"pname" : "MAC 魅可美国官网",
-		"pcon" : "MAC魅可美国官网  现有MAC2018圣诞限量彩妆上新啦"		
+		"pcon" : "MAC魅可美国官网  现有MAC2018圣诞限量彩妆上新啦",
+		"s1" : "5m.jpg",
+		"s2" : "6m.jpg",
+		"s3" : "7m.jpg",
+		"s4" : "8m.jpg",
+		"b1" : "5b.jpg",
+		"b2" : "6b.jpg",
+		"b3" : "7b.jpg",
+		"b4" : "8b.jpg",
+		"d1" : "5s.jpg",
+		"d2" : "6s.jpg",
+		"d3" : "7s.jpg",
+		"d4" : "8s.jpg"
+		
 	},	
 		
 	{
